@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  publish:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: test
+    # if: ${{ startsWith(github.event.release.tag_name, 'test/') }}
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Deployed!"
+      
