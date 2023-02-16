@@ -2,6 +2,8 @@
 
 set -eux
 
-echo "arg1=$1"
-echo "arg2=$2"
+# Variables from action
+echo "GITHUB_REPOSITORY_PASSED_BY_VAR=$GITHUB_REPOSITORY_PASSED_BY_VAR"
+echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+
 echo "Deploy succeed!"
